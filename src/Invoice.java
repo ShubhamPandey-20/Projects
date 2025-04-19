@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class Invoice {
@@ -5,10 +6,10 @@ public class Invoice {
     private List<Service> serviceList;
     private double totalAmount;
 
-    public Invoice(Customer customer, List<Service> serviceList, double totalAmount) {
+    public Invoice(Customer customer) {
         this.customer = customer;
-        this.serviceList = serviceList;
-        this.totalAmount = totalAmount;
+        this.serviceList = new ArrayList<>();
+        this.totalAmount = 0;
     }
     public void addService(Service service){
         serviceList.add(service);
